@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded',function(){
   let link = document.querySelector('a')
 
   // event bubbling
-  outer.addEventListener('click', function(){
-    console.log('outer')
-  })
+  // outer.addEventListener('click', function(){
+  //   console.log('outer')
+  // })
 
-  inner.addEventListener('click', function(){
-    console.log('inner')
-  })
+  // inner.addEventListener('click', function(){
+  //   console.log('inner')
+  // })
 
-  // // event capturing
+  // event capturing
   // outer.addEventListener('click', function(){
   //   console.log('outer')
   // }, true)
@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded',function(){
   // }, true)
 
 
-  // // stopPropagation
-  // outer.addEventListener('click', function(){
-  //   console.log('outer')
-  // })
+  // stopPropagation
+  outer.addEventListener('click', function(){
+    console.log('outer')
+  })
 
-  // inner.addEventListener('click', function(e){
-  //   e.stopPropagation();
-  //   console.log('inner')
-  // })
+  inner.addEventListener('click', function(e){
+    e.stopPropagation();
+    console.log('inner')
+  })
 
   // // preventDefault
   // link.addEventListener('click', function(e){
